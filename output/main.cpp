@@ -7,25 +7,34 @@
 #include <iostream>
 #include <fstream>
 
-#include <iostream>
+#include <bits/stdc++.h>
 
+#define LL long long
+#define REP(i, n) for (int i = 0, i##_len = (n); i < i##_len; ++i)
+#define FOR(i, a, b) for (int i = (a), i##_len = (b); i <= i##_len; ++i)
+#define REV(i, a, b) for (int i = (a); i >= (b); --i)
+#define CLR(a, b) memset((a), (b), sizeof(a))
+#define DUMP(x) cout << #x << " = " << (x) << endl;
+#define INF 1001001001001001001ll
+#define fcout cout << fixed << setprecision(12)
+#define YES "Yes"
+#define NO "No"
 
-int getTheAnswer() {
-    return 42;
-}
+using namespace std;
 
-class Task {
+typedef pair<int, int> P;
+
+class AStationAndBus {
 public:
-	void solve(std::istream& in, std::ostream& out) {
-		int x;
-		in >> x;
-		out << x + getTheAnswer() << "\n";
-	}
+    void solve(std::istream& cin, std::ostream& cout) {
+        string s;
+        cin >> s;
+        cout << (s.compare("AAA") == 0 || s.compare("BBB") == 0 ? NO : YES);
+    }
 };
 
-
 int main() {
-	Task solver;
+	AStationAndBus solver;
 	std::istream& in(std::cin);
 	std::ostream& out(std::cout);
 	solver.solve(in, out);
