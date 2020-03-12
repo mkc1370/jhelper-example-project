@@ -30,14 +30,18 @@ using namespace std;
 
 #define COUT(x) cout<<(x)<<endl
 void CINT(){}
-template <class Head,class... Tail>
-void CINT(Head&& head,Tail&&... tail){
-    cin>>head;
-    CINT(move(tail)...);
+template <class... Tail>
+void CINT(istream& cins, Tail&&... tail){
+    return;
 }
-#define CIN(...) int __VA_ARGS__;CINT(__VA_ARGS__)
-#define LCIN(...) ll __VA_ARGS__;CINT(__VA_ARGS__)
-#define SCIN(...) string __VA_ARGS__;CINT(__VA_ARGS__)
+template <class Head,class... Tail>
+void CINT(istream& cin, Head&& head,Tail&&... tail){
+    cin>>head;
+    CINT(cin, move(tail)...);
+}
+#define CIN(...) int __VA_ARGS__;CINT(cin,__VA_ARGS__)
+#define LCIN(...) ll __VA_ARGS__;CINT(cin,__VA_ARGS__)
+#define SCIN(...) string __VA_ARGS__;CINT(cin,__VA_ARGS__)
 
 template <class T = ll>
 T IN(){T x;cin>>x;return (x);}
