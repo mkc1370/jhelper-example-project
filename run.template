@@ -58,7 +58,7 @@ int main() {
 				bool result = jhelper::check(test.output, out.str());
 				allOK = allOK && result;
                 if (result) {
-                    std::cout << "AC" << std::endl;
+                    std::cout << "\033[32m\033[7m AC \033[m" << std::endl;
                 } else {
                     std::cout << "\033[31m\033[7m WA \033[m" << std::endl;
                 }
