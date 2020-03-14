@@ -179,6 +179,21 @@ long long comb(int n, int k) {
     return fact[n] * (fact_inv[k] * fact_inv[n - k] % MOD) % MOD;
 }
 
+template<class T> inline bool chmin(T& a, T b) {
+    if (a > b) {
+        a = b;
+        return true;
+    }
+    return false;
+}
+template<class T> inline bool chmax(T& a, T b) {
+    if (a < b) {
+        a = b;
+        return true;
+    }
+    return false;
+}
+
 class %ClassName% {
 public:
     void solve(std::istream& cin, std::ostream& cout) {
