@@ -7,18 +7,18 @@ template<class S, class T> using P = pair<S, T>;
 
 using ll = long long;
 using ull = unsigned long long;
-using vll = V<ll>;
-using vvll = V<vll>;
-using vvvll = V<vvll>;
+using vl = V<ll>;
+using vvl = V<vl>;
+using vvvl = V<vvl>;
 using pl = P<ll, ll>;
 using vpl = V<pl>;
 using vvpl = V<vpl>;
 using vs = V<string>;
-using qll = queue<ll>;
+using ql = queue<ll>;
 using qpl = queue<pl>;
-using mapll = map<ll, ll>;
-using setll = set<ll>;
-using pqll = priority_queue<ll>;
+using mapl = map<ll, ll>;
+using setl = set<ll>;
+using pql = priority_queue<ll>;
 
 #define int ll
 
@@ -61,11 +61,11 @@ using pqll = priority_queue<ll>;
 
 #define POW2(a) ((ll)(1)<<(a))
 #define POW10(a) ((ll)(pow(10.0,double(a))))
-#define POWll(a, b) (ll)(pow((double)(a),(double)(b)))
+#define POWl(a, b) (ll)(pow((double)(a),(double)(b)))
 
 #define CIN(...) ll __VA_ARGS__;Input(cin,__VA_ARGS__)
 #define CINS(...) string __VA_ARGS__;Input(cin,__VA_ARGS__)
-#define CINV(size, ...) vll __VA_ARGS__;vInput(cin,size,__VA_ARGS__)
+#define CINV(size, ...) vl __VA_ARGS__;vInput(cin,size,__VA_ARGS__)
 #define CINVS(size, ...) vs __VA_ARGS__;vInput(cin,size,__VA_ARGS__)
 
 #define COUT(...) Output(cout,__VA_ARGS__)
@@ -212,8 +212,8 @@ struct UFT {
 public:
     ll tsize;
     ll mode;
-    vll par;
-    vll rank;
+    vl par;
+    vl rank;
 
     UFT() {}
 
